@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: idumenil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/07 15:52:50 by idumenil          #+#    #+#             */
+/*   Updated: 2023/09/07 16:28:16 by idumenil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 void	fractal_init(t_fractal *fractal)
@@ -12,10 +24,10 @@ void	fractal_init(t_fractal *fractal)
 		free(fractal->mlx_connection);
 		write(1, "mlx window error\n", 17);
 	}
-	fractal->img.ptr = mlx_new_image(fractal->mlx_connection, WIDTH, HEIGHT);
-	if (!fractal->img.ptr)
+	fractal->img->img_ptr = mlx_new_image(fractal->mlx_connection, WIDTH, HEIGHT);
+	if (!fractal->img->img_ptr)
 	{
-		mlx_destroy_window(fractal->mlx.connection, fractal->mlx.window);
+		mlx_destroy_window(fractal->mlx_connection, fractal->mlx_window);
 		mlx_destroy_display(fractal->mlx_connection);
 		free(fractal->mlx_connection);
 		write(1, "mlx image error\n", 16);
