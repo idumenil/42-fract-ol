@@ -1,4 +1,3 @@
-#nom de l'executable
 NAME = fractol
 
 CC = gcc
@@ -6,7 +5,7 @@ CC = gcc
 #a decommenter plus tard et rajouter dans la ligne compilation
 #FLAGS = -Wall -Wextra -Werror
 
-SRCS = main.c string_utils.c init.c
+SRCS = main.c string_utils.c init.c events.c math_utils.c render.c
 
 OBJS = $(SRCS:.c=.o)
 
