@@ -2,7 +2,7 @@ NAME = fractol
 
 CC = gcc
 
-#FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.c string_utils.c init.c events.c math_utils.c render.c
 
