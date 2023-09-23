@@ -34,9 +34,9 @@ int	key_handler(int keysym, t_fractal *fractal)
 	else if (keysym == XK_Down)
 		fractal->shift_y += (0.5 * fractal->zoom);
 	else if (keysym == XK_plus)
-		fractal->iterations_defintion += 10;
+		fractal->iterations_definition += 10;
 	else if (keysym == XK_minus)
-		fractal->iterations_defintion -= 10;
+		fractal->iterations_definition -= 10;
 	fractal_render(fractal);
 	return (0);
 }
@@ -59,9 +59,9 @@ int	julia_track(int x, int y, t_fractal *fractal)
 {
 	if (!ft_strncmp(fractal->name, "julia", 5))
 	{
-		fractal->julia_x = (map(x, -2, +2, 0, WIDTH) * fractal->zoom) \
+		fractal->julia_x = (map(x, -2, +2, WIDTH) * fractal->zoom) \
 		+ fractal->shift_x;
-		fractal->julia_y = (map(y, +2, -2, 0, HEIGHT) * fractal->zoom) \
+		fractal->julia_y = (map(y, +2, -2, HEIGHT) * fractal->zoom) \
 		+ fractal->shift_y;
 		fractal_render(fractal);
 	}
