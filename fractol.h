@@ -6,7 +6,7 @@
 /*   By: idumenil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:52:41 by idumenil          #+#    #+#             */
-/*   Updated: 2023/09/20 14:05:24 by idumenil         ###   ########.fr       */
+/*   Updated: 2023/09/21 12:13:57 by idumenil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ typedef struct s_fractal
 	void	*mlx_window;
 	t_img	img;
 	double	escape_value;
-	int		iterations_defintion;
+	int		iterations_definition;
 	double	shift_x;
 	double	shift_y;
 	double	zoom;
@@ -82,7 +82,8 @@ void		putstr_fd(char *s, int fd);
 double		atodbl(char *s);
 void		fractal_init(t_fractal *fractal);
 void		fractal_render(t_fractal *fractal);
-double		map(double unscaled_num, double new_min, double new_max, double old_min, double old_max);
+double		map(double unscaled_num, double new_min, double new_max, \
+double old_max);
 t_complex	sum_complex(t_complex z1, t_complex z2);
 t_complex	square_complex(t_complex z);
 int			key_handler(int keysym, t_fractal *fractal);
