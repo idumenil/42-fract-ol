@@ -6,7 +6,7 @@
 /*   By: idumenil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:52:59 by idumenil          #+#    #+#             */
-/*   Updated: 2023/09/07 15:53:01 by idumenil         ###   ########.fr       */
+/*   Updated: 2023/09/18 10:37:15 by idumenil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int	main(int argc, char **av)
 {
 	t_fractal	fractal;
-
 
 	if (argc == 2 && !ft_strncmp(av[1], "mandelbrot", 10)
 		|| argc == 4 && !ft_strncmp(av[1], "julia", 5))
